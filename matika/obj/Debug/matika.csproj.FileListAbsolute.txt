@@ -1,0 +1,11 @@
+E:\škola\matika\matika\bin\Debug\matika.exe.config
+E:\škola\matika\matika\bin\Debug\matika.exe
+E:\škola\matika\matika\bin\Debug\matika.pdb
+E:\škola\matika\matika\obj\Debug\matika.csproj.AssemblyReference.cache
+E:\škola\matika\matika\obj\Debug\matika.csproj.SuggestedBindingRedirects.cache
+E:\škola\matika\matika\obj\Debug\matika.Form1.resources
+E:\škola\matika\matika\obj\Debug\matika.Properties.Resources.resources
+E:\škola\matika\matika\obj\Debug\matika.csproj.GenerateResource.cache
+E:\škola\matika\matika\obj\Debug\matika.csproj.CoreCompileInputs.cache
+E:\škola\matika\matika\obj\Debug\matika.exe
+E:\škola\matika\matika\obj\Debug\matika.pdb
