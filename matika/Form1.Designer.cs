@@ -33,6 +33,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.VysledekOutput = new System.Windows.Forms.RichTextBox();
+            this.textbox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textbox4 = new System.Windows.Forms.TextBox();
+            this.textbox5 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -75,15 +79,49 @@
             // 
             this.VysledekOutput.Location = new System.Drawing.Point(16, 263);
             this.VysledekOutput.Name = "VysledekOutput";
-            this.VysledekOutput.Size = new System.Drawing.Size(718, 175);
+            this.VysledekOutput.Size = new System.Drawing.Size(429, 175);
             this.VysledekOutput.TabIndex = 4;
             this.VysledekOutput.Text = "";
+            // 
+            // textbox3
+            // 
+            this.textbox3.Location = new System.Drawing.Point(476, 288);
+            this.textbox3.Name = "textbox3";
+            this.textbox3.Size = new System.Drawing.Size(258, 20);
+            this.textbox3.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(473, 263);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Možná funguje?:";
+            // 
+            // textbox4
+            // 
+            this.textbox4.Location = new System.Drawing.Point(476, 326);
+            this.textbox4.Name = "textbox4";
+            this.textbox4.Size = new System.Drawing.Size(258, 20);
+            this.textbox4.TabIndex = 7;
+            // 
+            // textbox5
+            // 
+            this.textbox5.Location = new System.Drawing.Point(476, 369);
+            this.textbox5.Name = "textbox5";
+            this.textbox5.Size = new System.Drawing.Size(258, 20);
+            this.textbox5.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textbox5);
+            this.Controls.Add(this.textbox4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textbox3);
             this.Controls.Add(this.VysledekOutput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -103,6 +141,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox VysledekOutput;
+        private System.Windows.Forms.TextBox textbox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textbox4;
+        private System.Windows.Forms.TextBox textbox5;
     }
 }
 

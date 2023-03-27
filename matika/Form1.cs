@@ -23,6 +23,9 @@ namespace matika
 
             Dictionary<int, int> wordLengths = new Dictionary<int, int>();
 
+            int totalLength = 0;
+            int totalCount = 0;
+
             foreach (string word in words)
             {
                 int length = 0;
@@ -40,6 +43,9 @@ namespace matika
 
                 if (length > 0)
                 {
+                    totalLength += length;
+                    totalCount++;
+
                     if (wordLengths.ContainsKey(length))
                     {
                         wordLengths[length]++;
@@ -51,18 +57,38 @@ namespace matika
                 }
             }
 
-            
+            if (totalCount > 0)
+            {
+                double average = (double)totalLength / totalCount;
+                textbox3.Text = $"Aritmetický průměr: {average:F2}{Environment.NewLine}";
+
+                double variance = 0;
+                foreach (int length in wordLengths.Keys)
+                {
+                    variance += Math.Pow(length - average, 2) * wordLengths[length];
+                }
+                variance /= totalCount;
+
+                double smero = Math.Sqrt(variance);
+                textbox4.Text = $"Směrodatná odchylka: {smero:F2}{Environment.NewLine}";
+                textbox5.Text = $"Rozptyl: {variance:F2}{Environment.NewLine}";
+            }
+
             foreach (KeyValuePair<int, int> entry in wordLengths)
             {
-                
                 VysledekOutput.AppendText(string.Format("{0} písmen ve slově: {1}{2}", entry.Key, entry.Value, Environment.NewLine));
             }
+
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             VysledekOutput.Text = "";
-            CountWordLengths();
+            textbox3.Text = "";
+            textbox4.Text = "";
+            textbox5.Text = "";
+            CountWordLengths(); 
         }
     }
 
