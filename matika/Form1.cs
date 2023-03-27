@@ -72,15 +72,47 @@ namespace matika
                 double smero = Math.Sqrt(variance);
                 textbox4.Text = $"Směrodatná odchylka: {smero:F2}{Environment.NewLine}";
                 textbox5.Text = $"Rozptyl: {variance:F2}{Environment.NewLine}";
+
+                // Modus
+                int modeCount = 0;
+                int modeValue = 0;
+                foreach (KeyValuePair<int, int> entry in wordLengths)
+                {
+                    if (entry.Value > modeCount)
+                    {
+                        modeCount = entry.Value;
+                        modeValue = entry.Key;
+                    }
+                }
+                textboxM.Text = $"Modus: {modeValue}{Environment.NewLine}";
+
+                // median
+                int medianIndex = totalCount / 2;
+                int medianValue = 0;
+                int countSoFar = 0;
+                foreach (KeyValuePair<int, int> entry in wordLengths)
+                {
+                    countSoFar += entry.Value;
+                    if (countSoFar > medianIndex || (totalCount % 2 == 0 && countSoFar == medianIndex))
+                    {
+                        medianValue = entry.Key;
+                        break;
+                    }
+                }
+                textboxME.Text = $"Medián: {medianValue}{Environment.NewLine}";
+
+                double variacniKoeficient = (smero / average) * 100;
+
+                textboxVV.Text = $"Variační koeficient(procent): {variacniKoeficient}{Environment.NewLine}";
             }
 
             foreach (KeyValuePair<int, int> entry in wordLengths)
             {
                 VysledekOutput.AppendText(string.Format("{0} písmen ve slově: {1}{2}", entry.Key, entry.Value, Environment.NewLine));
             }
-
         }
 
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -88,6 +120,8 @@ namespace matika
             textbox3.Text = "";
             textbox4.Text = "";
             textbox5.Text = "";
+            textboxM.Text = "";
+            textboxME.Text = "";
             CountWordLengths(); 
         }
     }

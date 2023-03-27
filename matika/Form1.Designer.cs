@@ -37,6 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textbox4 = new System.Windows.Forms.TextBox();
             this.textbox5 = new System.Windows.Forms.TextBox();
+            this.textboxM = new System.Windows.Forms.TextBox();
+            this.textboxME = new System.Windows.Forms.TextBox();
+            this.textboxVV = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -85,7 +88,7 @@
             // 
             // textbox3
             // 
-            this.textbox3.Location = new System.Drawing.Point(476, 288);
+            this.textbox3.Location = new System.Drawing.Point(476, 279);
             this.textbox3.Name = "textbox3";
             this.textbox3.Size = new System.Drawing.Size(258, 20);
             this.textbox3.TabIndex = 5;
@@ -101,23 +104,47 @@
             // 
             // textbox4
             // 
-            this.textbox4.Location = new System.Drawing.Point(476, 326);
+            this.textbox4.Location = new System.Drawing.Point(476, 305);
             this.textbox4.Name = "textbox4";
             this.textbox4.Size = new System.Drawing.Size(258, 20);
             this.textbox4.TabIndex = 7;
             // 
             // textbox5
             // 
-            this.textbox5.Location = new System.Drawing.Point(476, 369);
+            this.textbox5.Location = new System.Drawing.Point(476, 331);
             this.textbox5.Name = "textbox5";
             this.textbox5.Size = new System.Drawing.Size(258, 20);
             this.textbox5.TabIndex = 8;
+            // 
+            // textboxM
+            // 
+            this.textboxM.Location = new System.Drawing.Point(476, 357);
+            this.textboxM.Name = "textboxM";
+            this.textboxM.Size = new System.Drawing.Size(258, 20);
+            this.textboxM.TabIndex = 9;
+            // 
+            // textboxME
+            // 
+            this.textboxME.Location = new System.Drawing.Point(476, 383);
+            this.textboxME.Name = "textboxME";
+            this.textboxME.Size = new System.Drawing.Size(258, 20);
+            this.textboxME.TabIndex = 10;
+            // 
+            // textboxVV
+            // 
+            this.textboxVV.Location = new System.Drawing.Point(476, 409);
+            this.textboxVV.Name = "textboxVV";
+            this.textboxVV.Size = new System.Drawing.Size(258, 20);
+            this.textboxVV.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textboxVV);
+            this.Controls.Add(this.textboxME);
+            this.Controls.Add(this.textboxM);
             this.Controls.Add(this.textbox5);
             this.Controls.Add(this.textbox4);
             this.Controls.Add(this.label3);
@@ -145,6 +172,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textbox4;
         private System.Windows.Forms.TextBox textbox5;
+        private System.Windows.Forms.TextBox textboxM;
+        private System.Windows.Forms.TextBox textboxME;
+        private System.Windows.Forms.TextBox textboxVV;
     }
 }
 
